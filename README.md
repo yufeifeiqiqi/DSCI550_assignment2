@@ -18,7 +18,7 @@ Wrote answers towards thoughts about Apache Tika
 
 Hui Qi 
 > Took charge for step 5 and 10 (GeoTopicParser)<br>
-Wrote codes and answers for questions 1, 3,4 in the report
+Wrote codes and answers for questions 1, 3, 4 in the report<br>
 Wrote answers towards thoughts about GeoTopicParser
 
 Xiaoyu Dong
