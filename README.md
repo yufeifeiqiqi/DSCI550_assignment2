@@ -5,9 +5,10 @@ Team menbers: Jimin Ding, Mingyu Zong, Hui Qi, Xiaoyu Dong
 
 ## Group Assignment Allocation
 Jimin Ding
-> Took charge for step 5 (add sports, films, ifHate, ifScarcasm features)<br>
-Wrote codes and answers for questions 4, 5 in the report<br>
-Wrote readme.md
+> Took charge for step 8 (language detection)<br>
+Took charge for step 9 (RTG Translation)<br>
+Wrote codes and answers for questions 2 in the report<br>
+Wrote answers towards thoughts about RTG
 
 Mingyu Zong
 > Took charge for step 7 (Tika-Similarity)<br>
@@ -104,31 +105,22 @@ Q6_Language_Indentification.ipynb
 
 ## Methodology
 
-#### Q5: Add and expand the dataset with sporting events, film festivals, flag for hate speech, and flag for sarcasm
-
-We have the film and sports events period from film_date.txt and sport_date.txt. If a user makes a post (Account Created Date) during these periods, our columns "Film" and "Sport" will enter the name of those events from film_name.txt and sport_name.txt. 
- 
-We have a list of words in hatespeech.txt to help detect hate speech in our posts. If the title and narrative of the post have more than two marked words in the hatespeech.txt, this post will be flagged as hate speech and shown as "TRUE" in the "ifHate" column in our dataset. The list of words is from the ADL Hate Symbol Database.  
-
-We have a list of 'sarcasm.txt' from the database Sarcasm_v2, and we compiled a list of 100 woords that appeared most frequently in these ironic sentences, such as you, me, etc. These commonly used words can negatively affect the similarity of two sentences. Then we removed the 100 words (buzz) for the sentence in 'scarasm.txt' to form the new document 'sarcasm_clear.txt'. Finally, we compared the title and narritive parts of each post with each sentence for 'sarcasm_clear.txt', using Levenshtein.ratio. If the similarity of a post exceeds 0.7 (the maximum is 1), it is considered containing sarcasm, and this post will be flagged as "TRUE" in the "ifSarcasm" column in our dataset.
+#### Step8: Language detection by using Tika’s language identifier and Google LangDetect/Python
+Since the narrative part of the post has a lot of tags, we wrote the remove_tag function to remove tags from the text. Then we called tika.language.from_buffer and langdetect.detect to detect the language of the text, and store the detection results into 'tika_language' and 'google_language'columns.
 
 ``` 
-Levenshtein.ratio
+tika.language.from_buffer
+langdetect.detect
 ``` 
 
-#### Q6: Identify at least three other datasets, each of different top level MIME type
+#### Step9: RTG Translation
+First, we use the results of Step8 to put the non-English post index into the Trans_list. Then remove tags and urls from the post with remove_tag and find_regular (because of the possibility of a timeout error). Then we use docker tp create RTG localhost and translate the text using tika.translate.auto_from_buffer(txt,'en').
 
-Our three other datasets have following MIME types:
-- image/png
-> We find and download three images of positive words (pos1.png, pos2.png, pos3.png). <br>
-We import Tesseract to extract text from images and compare them with narratives. We store "TRUE" or "FALSE" depending on whether posts have positive words in these three images in columns Postive Words 1, Postive Words 2, and Postive Words 3.
+It is easy to generate a timeout error while translating because the text is too long or in certain languages (such as Hindi and Mali). For text longer than 120, we cut it into multiple texts according to punctuation marks, then translated thoses pieces and integrated. The result is stored in 'rtg_translate' column.
 
-- application/api+json
-> We use a public holiday API to find whether the date of the post is a holiday in each continent or not. We use the request library to parse API responses. (EU_holiday is shortened for Europe; AM_holiday is shortened for Americas; AS_holiday  is shortened for Asia; AF_holiday  is shortened for Africa; OC_holiday is shortened for Oceania holiday names). <br>
-If the post date is a holiday, we will input the name of that holiday into its correct position in one of the following columns: Europe Holiday, Americas Holiday, Asia Holiday, Africa Holiday, and Oceania Holiday. And also, enter "TRUE" into Public Holiday Or Not. We will enter "False" into Public Holiday Or Not if it is not a holiday.
-
-- application/zip
-> We extract the zip file (owid-covid-data.zip), unzip it, and get csv file for the covid condition. It represents users' interest in health and politics. Cov_cases, cov_deaths, cov_tests, and cov_vaccinations stand for the number of cases, deaths, tests, and vaccinations in a day globally.
+``` 
+tika.translate.auto_from_buffer
+``` 
 
 #### Q7: Tika-Similarity
 Follow instructions on https://github.com/chrismattmann/tika-similarity and Professor's proposed workflow posted on Slack.
