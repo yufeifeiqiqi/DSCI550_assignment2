@@ -17,8 +17,9 @@ Wrote codes and answers for questions 1 in the report<br>
 Wrote answers towards thoughts about Apache Tika
 
 Hui Qi 
-> Wrote codes and answers for questions 2, 3, 6, 7 in the report<br>
-Wrote readme.md
+> Took charge for step 5 and 10 (GeoTopicParser)<br>
+Wrote codes and answers for questions 1, 3,4 in the report
+Wrote answers towards thoughts about GeoTopicParser
 
 Xiaoyu Dong
 > Took charge for step 6 (add three other datasets with different MIME types)<br>
