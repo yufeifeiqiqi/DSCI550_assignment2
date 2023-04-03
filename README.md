@@ -11,9 +11,9 @@ Wrote codes and answers for questions 2 in the report<br>
 Wrote answers towards thoughts about RTG
 
 Mingyu Zong
-> Detoxify scores generation
-Posts' toxicity analysis
-Thoughts about Detoxify
+> Detoxify scores generation<br>
+Posts' toxicity analysis<br>
+Thoughts about Detoxify<br>
 
 Hui Qi 
 > Took charge for step 5 and 10 (GeoTopicParser)<br>
