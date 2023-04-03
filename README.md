@@ -11,10 +11,9 @@ Wrote codes and answers for questions 2 in the report<br>
 Wrote answers towards thoughts about RTG
 
 Mingyu Zong
-> Took charge for step 7 (Tika-Similarity)<br>
-Took charge for step 8 (Package data)<br>
-Wrote codes and answers for questions 1 in the report<br>
-Wrote answers towards thoughts about Apache Tika
+> Detoxify scores generation
+Posts' toxicity analysis
+Thoughts about Detoxify
 
 Hui Qi 
 > Took charge for step 5 and 10 (GeoTopicParser)<br>
