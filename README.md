@@ -37,6 +37,7 @@ brotlipy==0.7.0
 ConfigParser==5.3.0
 cryptography==38.0.4
 Cython==0.29.32
+detoxify==0.5.1
 dl==0.1.0
 docutils==0.18.1
 HTMLParser==0.0.2
@@ -92,8 +93,13 @@ It is easy to generate a timeout error while translating because the text is too
 tika.translate.auto_from_buffer
 ``` 
 
-#### Q7: Tika-Similarity
-Follow instructions on https://github.com/chrismattmann/tika-similarity and Professor's proposed workflow posted on Slack.
+#### Step11: Detoxify Scores Generation
+This step uses the 'rtg_translate' column derived from RTG Translation. A script written in Python iterates through each value within the column, passes it as input string into detoxify, and saves score from each category into corresponding columns. Since RTG translated most of the posts into English, we ruled out the 'multilingual' model. Considering the additional 'sexual_explicit' category would provide more insights about these Pixstory posts, we determined to use the 'unbiased' model for all entries.
+
+With combine_add_geo.csv (in folder Step10 - GeoTopicParser) and detoxify_scores.py (in folder Step11 - Detoxify) in the same folder, running the following command will generate a final.tsv with 7 more columns for scores: 'Toxicity', 'Severe_Toxicity', 'Obscenity', 'Identity_Attack', 'Insult', 'Threat', 'Sexual_Explicit'.
+```
+python3 detoxify_scores.py
+```
 
 
 
