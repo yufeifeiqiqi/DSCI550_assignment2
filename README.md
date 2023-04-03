@@ -30,7 +30,37 @@ Wrote codes and answers for added datasets, unintended consequences, questions 5
 
 A list of all of the dependencies used, included their version number  
 ```
-
+attr==0.3.2
+attrs==22.1.0
+brotli==1.0.9
+brotlipy==0.7.0
+ConfigParser==5.3.0
+cryptography==38.0.4
+Cython==0.29.32
+dl==0.1.0
+docutils==0.18.1
+HTMLParser==0.0.2
+importlib_metadata==4.11.3
+ipython==8.12.0
+ipywidgets==7.6.5
+Jinja2==2.11.3
+jnius==1.1.0
+keyring==23.4.0
+lockfile==0.12.2
+lxml==4.9.1
+matplotlib==3.7.1
+numpy==1.21.5
+ordereddict==1.1
+pandas==1.4.4
+Pillow==9.5.0
+protobuf==4.22.1
+pyOpenSSL==23.1.1
+railroad==0.5.0
+Sphinx==5.0.2
+toml==0.10.2
+tornado==6.2
+xmlrpclib==1.0.1
+zipp==3.11.0
 ```
 ## Installation
 
