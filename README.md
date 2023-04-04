@@ -74,6 +74,16 @@ pip install -r requirements.txt
 ## Running the project
 
 
+
+
+
+In the Q1_image_code folder, open Q1.ipynb will show the code to visualize correlations between gender, age, interest and geolocation mentioned. This is the answer towards report question 1.
+```
+Q1.ipynb
+```
+
+
+
 ## Methodology
 
 #### Step8: Language detection by using Tika’s language identifier and Google LangDetect/Python
