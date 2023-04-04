@@ -92,6 +92,7 @@ It is easy to generate a timeout error while translating because the text is too
 ``` 
 tika.translate.auto_from_buffer
 ```
+
 ### Step10: Location nname entity recognition by Tika GeoTopicParser with REST service of lucene-geo-gazetteer to find Lat/Lng
 
 
