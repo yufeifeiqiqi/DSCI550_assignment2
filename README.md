@@ -61,6 +61,7 @@ toml==0.10.2
 tornado==6.2
 xmlrpclib==1.0.1
 zipp==3.11.0
+mvn==3.9.1
 ```
 ## Installation
 
