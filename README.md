@@ -21,8 +21,7 @@ Wrote codes and answers for questions 1, 3, 4 in the report<br>
 Wrote answers towards thoughts about GeoTopicParser
 
 Xiaoyu Dong
-> Took charge for step 6 (add three other datasets with different MIME types)<br>
-Wrote codes and answers for added datasets, unintended consequences, questions 5 in the report<br>
+> 
 
 
 
@@ -91,7 +90,11 @@ It is easy to generate a timeout error while translating because the text is too
 
 ``` 
 tika.translate.auto_from_buffer
-``` 
+```
+### Step10: Location nname entity recognition by Tika GeoTopicParser with REST service of lucene-geo-gazetteer to find Lat/Lng
+
+
+
 
 #### Step11: Detoxify Scores Generation
 This step uses the 'rtg_translate' column derived from RTG Translation. A script written in Python iterates through each value within the column, passes it as input string into detoxify, and saves score from each category into corresponding columns. Since RTG translated most of the posts into English, we ruled out the 'multilingual' model. Considering the additional 'sexual_explicit' category would provide more insights about these Pixstory posts, we determined to use the 'unbiased' model for all entries.
