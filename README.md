@@ -75,14 +75,24 @@ pip install -r requirements.txt
 
 
 
+In the Step10-GeoTopicParser folder, oepn GeoTopicParser.ipynb will show the code of the results of extracting out location names from narratives and getting their longitudes and latitudes.
+```
+GeoTopicParser.ipynb
+```
 
-
-In the Q1_image_code folder, open Q1.ipynb will show the code to visualize correlations between gender, age, interest and geolocation mentioned. This is the answer towards report question 1.
+In the Q1_image_code folder, open Q1.ipynb will show the code to visualize correlations among gender, age, interest and geolocation mentioned. This is the answer towards report question 1.
 ```
 Q1.ipynb
 ```
 
-
+In the Q3_4_image_code folder, open Q3.ipynb will show the code to visualize correlations between post language and identified mentioned locations. This is the answer towards report question 3.
+```
+Q3.ipynb
+```
+In the Q3_4_image_code folder, open Q4.ipynb will show the code of the results about correlations between the sporting events, or the entertainment events with locations. This is the answer towards report question 4.
+```
+Q4.ipynb
+```
 
 ## Methodology
 
