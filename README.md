@@ -29,7 +29,7 @@ Wrote answers towards thoughts about Tika Image Captioning and Tika’s Inceptio
 
 ## Dependencies
 
-A list of all of the dependencies used, included their version number  
+A list of all of the dependencies used, included their version number. Need to download java. 
 ```
 attr==0.3.2
 attrs==22.1.0
