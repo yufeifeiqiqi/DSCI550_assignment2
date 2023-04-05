@@ -49,6 +49,7 @@ Jinja2==2.11.3
 jnius==1.1.0
 keyring==23.4.0
 lockfile==0.12.2
+langdetect==1.0.9
 lxml==4.9.1
 matplotlib==3.7.1
 numpy==1.21.5
@@ -58,7 +59,9 @@ Pillow==9.5.0
 protobuf==4.22.1
 pyOpenSSL==23.1.1
 railroad==0.5.0
+re==2.2.1
 Sphinx==5.0.2
+tika==2.6.0
 toml==0.10.2
 tornado==6.2
 xmlrpclib==1.0.1
@@ -75,7 +78,15 @@ pip install -r requirements.txt
 
 ## Running the project
 
+In the Step8-Language Detection folder, open combine_language_detection.ipynb will show the code of the results of language of the post and the pie plot for question 2.
+```
+combine_language_detection.ipynb
+```
 
+In the Step9-RTG folder, open RTG_translate.ipynb and use docker to run RTG will show the code of the translation results of the narrative part of the post.
+```
+RTG_translate.ipynb
+```
 
 In the Step10-GeoTopicParser folder, oepn GeoTopicParser.ipynb will show the code of the results of extracting out location names from narratives and getting their longitudes and latitudes.
 ```
