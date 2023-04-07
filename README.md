@@ -107,6 +107,11 @@ In the Q3_4_image_code folder, open Q4.ipynb will show the code of the results a
 Q4.ipynb
 ```
 
+In the Step11 - Detoxify folder, Detoxify_Analysis.ipynb contains code for exploring associations between results from the keywords matching method and the Detoxify python library.
+```
+Detoxify_Analysis.ipynb
+```
+
 ## Methodology
 
 #### Step7: Download images, Install Tika Image Dockers and generate captions for Pixstory images posts
