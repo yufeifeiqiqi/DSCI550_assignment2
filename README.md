@@ -93,6 +93,11 @@ In the Step10-GeoTopicParser folder, oepn GeoTopicParser.ipynb will show the cod
 GeoTopicParser.ipynb
 ```
 
+In the Step11 - Detoxify folder, oepn detoxify_scores.py will run Detoxify on all the Pixstory posts and generate scores for their contents.
+```
+detoxify_scores.py
+```
+
 In the Q1_image_code folder, open Q1.ipynb will show the code to visualize correlations among gender, age, interest and geolocation mentioned. This is the answer towards report question 1.
 ```
 Q1.ipynb
